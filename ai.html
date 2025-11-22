@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suneater | AI & Automation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Cinzel', 'serif'] }, colors: { void: { 950: '#020617' }, nebula: { 400: '#a78bfa', 900: '#581c87' } } } } }
+    </script>
+    <style>body{background-color:#020617;color:#94a3b8;}</style>
+</head>
+<body class="bg-void-950 flex flex-col min-h-screen">
+    <canvas id="starfield" class="fixed top-0 left-0 w-full h-full -z-10 pointer-events-none"></canvas>
+
+    <nav class="fixed top-0 left-0 w-full z-50 py-6 bg-void-950/90 border-b border-nebula-400/10">
+        <div class="max-w-5xl mx-auto px-6">
+            <a href="index.html" class="text-xs font-bold tracking-widest text-slate-500 hover:text-nebula-400 uppercase transition-colors">&larr; Return to The Cosmic Hall</a>
+        </div>
+    </nav>
+
+    <main class="flex-grow max-w-5xl mx-auto px-6 pt-32 pb-24 w-full">
+        <header class="mb-16">
+            <div class="inline-block px-3 py-1 border border-nebula-400/30 rounded-sm bg-nebula-900/20 text-nebula-400 text-xs font-bold tracking-widest mb-6">REALM III</div>
+            <h1 class="font-display text-5xl md:text-6xl font-bold text-slate-100 mb-6">AI & Automation</h1>
+            <p class="text-xl text-slate-400 font-light max-w-2xl">Mimir's Well. Deploying Agents to devour repetitive tasks. We sacrifice complexity for wisdom.</p>
+        </header>
+
+        <!-- Resource Uplink -->
+        <section class="mb-20">
+            <h2 class="text-xs font-mono text-slate-600 uppercase tracking-widest mb-6 border-b border-white/5 pb-2">Whispers of Mimir (Resources)</h2>
+            <div class="grid gap-4">
+                <a href="https://platform.openai.com/docs/introduction" target="_blank" class="group block p-6 bg-slate-900/30 border border-slate-800 hover:border-nebula-400/50 transition-colors rounded-sm">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="font-bold text-slate-200 group-hover:text-nebula-400 transition-colors">The OpenAI Grimoire</span>
+                        <svg class="w-4 h-4 text-slate-600 group-hover:text-nebula-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    </div>
+                    <p class="text-sm text-slate-500">Foundational docs for the spirits powering my swarms.</p>
+                </a>
+                
+                <a href="#" class="group block p-6 bg-slate-900/30 border border-slate-800 hover:border-nebula-400/50 transition-colors rounded-sm">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="font-bold text-slate-200 group-hover:text-nebula-400 transition-colors">The Gleipnir Chains (LangChain)</span>
+                        <svg class="w-4 h-4 text-slate-600 group-hover:text-nebula-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    </div>
+                    <p class="text-sm text-slate-500">Architectural bindings to control the raw power of LLMs, just as the dwarves bound Fenrir.</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Detailed Content -->
+        <section class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <h3 class="font-display text-2xl text-slate-100">The Einherjar (Automated Horde)</h3>
+                <p class="text-slate-400 leading-relaxed">
+                    I design "Silicon Einherjar"—custom automation scripts and AI agents that battle high-volume, low-judgment tasks. From reconciling spreadsheets with Python pandas to generating customer support drafts via LLMs.
+                </p>
+            </div>
+            
+            <div class="flex flex-col gap-3">
+                <div class="p-4 bg-nebula-900/10 border border-nebula-400/20 rounded-sm flex items-center gap-4">
+                    <div class="w-8 h-8 rounded bg-nebula-400 flex items-center justify-center text-void-950 font-bold">Py</div>
+                    <div class="text-sm">
+                        <div class="text-slate-100 font-bold">The Draugr Hunter</div>
+                        <div class="text-nebula-400 text-xs">Cleansing dead data • Saved 40h/month</div>
+                    </div>
+                </div>
+                <div class="p-4 bg-nebula-900/10 border border-nebula-400/20 rounded-sm flex items-center gap-4">
+                    <div class="w-8 h-8 rounded bg-purple-500 flex items-center justify-center text-white font-bold">AI</div>
+                    <div class="text-sm">
+                        <div class="text-slate-100 font-bold">Valkyrie Selection</div>
+                        <div class="text-purple-300 text-xs">Ticket Triage (GPT-4o) • 98% Accuracy</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="w-full py-8 border-t border-white/5 relative z-10 bg-void-950">
+        <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="text-xs text-slate-600 font-mono">© 2024 SUNEATER.IO</div>
+            <div class="flex gap-6">
+                <a href="https://linkedin.com" target="_blank" class="text-xs font-bold tracking-widest text-slate-600 hover:text-slate-300 uppercase transition-colors">LinkedIn</a>
+                <a href="https://github.com" target="_blank" class="text-xs font-bold tracking-widest text-slate-600 hover:text-slate-300 uppercase transition-colors">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const canvas = document.getElementById('starfield');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        function resize(){ canvas.width=window.innerWidth; canvas.height=window.innerHeight; init(); }
+        function init(){
+            particles=[]; const n=Math.floor((canvas.width*canvas.height)/9000);
+            for(let i=0;i<n;i++) particles.push({
+                x: Math.random()*canvas.width, 
+                y: Math.random()*canvas.height, 
+                s: Math.random()*1.5, 
+                v: Math.random()*0.2+0.05, 
+                o: Math.random()*0.8, 
+                c: '#a78bfa'
+            });
+        }
+        function draw(){
+            ctx.clearRect(0,0,canvas.width,canvas.height);
+            particles.forEach(p=>{
+                ctx.globalAlpha=p.o; ctx.fillStyle = p.c; ctx.beginPath(); ctx.arc(p.x,p.y,p.s,0,Math.PI*2); ctx.fill();
+                p.y -= p.v; if(p.y<0){p.y=canvas.height;p.x=Math.random()*canvas.width;}
+            });
+            requestAnimationFrame(draw);
+        }
+        window.addEventListener('resize',resize); resize(); draw();
+    </script>
+</body>
+</html>

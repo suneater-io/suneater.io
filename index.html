@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suneater | The Cosmic Hall</title>
+    <meta name="description" content="The Fenrir of Automation. Breaking the chains of complexity through code." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Cinzel', 'serif'] },
+            colors: {
+              void: { 950: '#020617' }, // Deep space blue
+              cosmic: { 400: '#38bdf8', 500: '#0ea5e9', 900: '#0c4a6e' }, // Sky blue
+              nebula: { 400: '#a78bfa', 500: '#8b5cf6', 900: '#581c87' }, // Violet
+              starlight: { 100: '#f1f5f9', 400: '#94a3b8' },
+              life: { 400: '#4ade80', 900: '#14532d' } // Green
+            },
+            keyframes: {
+                float: {
+                    '0%, 100%': { transform: 'translateY(0)' },
+                    '50%': { transform: 'translateY(-10px)' },
+                }
+            },
+            animation: {
+                float: 'float 6s ease-in-out infinite',
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body { background-color: #020617; color: #94a3b8; }
+      .glitch-effect:hover { text-shadow: 2px 0 #38bdf8, -2px 0 #a78bfa; }
+    </style>
+  <link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-void-950 flex flex-col min-h-screen overflow-x-hidden selection:bg-cosmic-400/30">
+    
+    <!-- Starfield Background -->
+    <canvas id="starfield" class="fixed top-0 left-0 w-full h-full -z-10 pointer-events-none"></canvas>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full z-50 py-6 bg-void-950/80 backdrop-blur-sm border-b border-white/5">
+      <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+        <div class="font-display font-bold text-xl tracking-widest text-slate-100">
+          SUN<span class="text-cosmic-400">EATER</span>
+        </div>
+        <div class="hidden md:flex gap-8 text-xs font-bold tracking-widest uppercase text-slate-500">
+          <a href="webex.html" class="hover:text-cosmic-400 transition-colors duration-300">Webex CC</a>
+          <a href="health.html" class="hover:text-life-400 transition-colors duration-300">Health</a>
+          <a href="ai.html" class="hover:text-nebula-400 transition-colors duration-300">AI & Automation</a>
+          <a href="github.html" class="hover:text-white transition-colors duration-300">GitHub</a>
+          <a href="contact.html" class="hover:text-yellow-400 transition-colors duration-300">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="flex-grow flex flex-col justify-center items-center text-center px-6 pt-32 pb-20 relative">
+      
+      <!-- Central Sigil / Logo Area -->
+      <div class="mb-12 relative animate-float">
+        <div class="w-48 h-48 mx-auto rounded-full border-2 border-slate-800 flex items-center justify-center bg-void-950 relative z-10 shadow-[0_0_50px_rgba(56,189,248,0.1)] overflow-hidden">
+            <img src="https://placehold.co/400x400/020617/38bdf8?text=Header+Image" alt="Suneater Logo" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-500">
+        </div>
+        <!-- Glow behind sigil -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-cosmic-500/10 blur-3xl -z-0 rounded-full"></div>
+      </div>
+
+      <h2 class="font-display text-5xl md:text-7xl font-bold text-slate-100 mb-6 tracking-tight">
+        SUNEATER.IO
+      </h2>
+      
+      <p class="max-w-2xl mx-auto text-lg md:text-xl text-slate-400 font-light leading-relaxed mb-16">
+        The Fenrir of Automation. Breaking the chains of complexity through <span class="text-cosmic-400 font-medium">code</span>.
+      </p>
+
+      <!-- Runestones (Quick Links) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-5xl mx-auto mb-24">
+        
+        <!-- Card 1: Webex -->
+        <a href="webex.html" class="relative group block p-8 bg-void-950/50 border border-slate-800 hover:border-cosmic-400 hover:bg-cosmic-900/10 transition-all duration-500 rounded-sm overflow-visible">
+           <!-- Tooltip -->
+           <div class="absolute -top-10 left-1/2 -translate-x-1/2 px-3 py-1 bg-void-950 border border-cosmic-400 text-cosmic-400 text-xs font-bold tracking-widest uppercase rounded opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 shadow-[0_0_15px_rgba(56,189,248,0.3)] z-20 pointer-events-none whitespace-nowrap">
+             Bifröst
+           </div>
+           
+           <div class="text-cosmic-400 mb-4 opacity-70 group-hover:opacity-100 transition-opacity">
+             <!-- Headset Icon -->
+             <svg class="w-8 h-8 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18 12h2a2 2 0 002-2v-4a2 2 0 00-2-2h-2M6 12H4a2 2 0 01-2-2V6a2 2 0 012-2h2m12 6v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2m14 0V6a5 5 0 00-5-5h-4a5 5 0 00-5 5v6m7 8v4m0 0H8m4 0h4"></path></svg>
+           </div>
+           <h3 class="font-display text-xl font-bold text-slate-200 mb-2 group-hover:text-white transition-colors">WEBEX CC</h3>
+           <div class="h-0.5 w-8 bg-slate-700 mx-auto group-hover:bg-cosmic-400 transition-colors duration-500"></div>
+        </a>
+
+        <!-- Card 2: Health -->
+        <a href="health.html" class="relative group block p-8 bg-void-950/50 border border-slate-800 hover:border-life-400 hover:bg-life-900/10 transition-all duration-500 rounded-sm overflow-visible">
+           <!-- Tooltip -->
+           <div class="absolute -top-10 left-1/2 -translate-x-1/2 px-3 py-1 bg-void-950 border border-life-400 text-life-400 text-xs font-bold tracking-widest uppercase rounded opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 shadow-[0_0_15px_rgba(74,222,128,0.3)] z-20 pointer-events-none whitespace-nowrap">
+             Yggdrasil
+           </div>
+
+           <div class="text-life-400 mb-4 opacity-70 group-hover:opacity-100 transition-opacity">
+             <!-- Health/Medical Cross Icon -->
+             <svg class="w-8 h-8 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4v16m8-8H4"></path></svg>
+           </div>
+           <h3 class="font-display text-xl font-bold text-slate-200 mb-2 group-hover:text-white transition-colors">INTEGRATED HEALTH</h3>
+           <div class="h-0.5 w-8 bg-slate-700 mx-auto group-hover:bg-life-400 transition-colors duration-500"></div>
+        </a>
+
+        <!-- Card 3: AI -->
+        <a href="ai.html" class="relative group block p-8 bg-void-950/50 border border-slate-800 hover:border-nebula-400 hover:bg-nebula-900/10 transition-all duration-500 rounded-sm overflow-visible">
+           <!-- Tooltip -->
+           <div class="absolute -top-10 left-1/2 -translate-x-1/2 px-3 py-1 bg-void-950 border border-nebula-400 text-nebula-400 text-xs font-bold tracking-widest uppercase rounded opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 shadow-[0_0_15px_rgba(167,139,250,0.3)] z-20 pointer-events-none whitespace-nowrap">
+             Mimir
+           </div>
+
+           <div class="text-nebula-400 mb-4 opacity-70 group-hover:opacity-100 transition-opacity">
+             <!-- Microchip/Brain Icon -->
+             <svg class="w-8 h-8 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
+           </div>
+           <h3 class="font-display text-xl font-bold text-slate-200 mb-2 group-hover:text-white transition-colors">AI & AUTOMATION</h3>
+           <div class="h-0.5 w-8 bg-slate-700 mx-auto group-hover:bg-nebula-400 transition-colors duration-500"></div>
+        </a>
+
+        <!-- Card 4: GitHub -->
+        <a href="github.html" class="relative group block p-8 bg-void-950/50 border border-slate-800 hover:border-white hover:bg-white/5 transition-all duration-500 rounded-sm overflow-visible">
+           <!-- Tooltip -->
+           <div class="absolute -top-10 left-1/2 -translate-x-1/2 px-3 py-1 bg-void-950 border border-white text-white text-xs font-bold tracking-widest uppercase rounded opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 shadow-[0_0_15px_rgba(255,255,255,0.3)] z-20 pointer-events-none whitespace-nowrap">
+             The Archives
+           </div>
+
+           <div class="text-slate-300 mb-4 opacity-70 group-hover:opacity-100 transition-opacity">
+             <svg class="w-8 h-8 mx-auto" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+           </div>
+           <h3 class="font-display text-xl font-bold text-slate-200 mb-2 group-hover:text-white transition-colors">GITHUB</h3>
+           <div class="h-0.5 w-8 bg-slate-700 mx-auto group-hover:bg-white transition-colors duration-500"></div>
+        </a>
+
+        <!-- Card 5: Contact -->
+        <a href="contact.html" class="relative group block p-8 bg-void-950/50 border border-slate-800 hover:border-yellow-400 hover:bg-yellow-900/10 transition-all duration-500 rounded-sm md:col-span-2 lg:col-span-1 overflow-visible">
+           <!-- Tooltip -->
+           <div class="absolute -top-10 left-1/2 -translate-x-1/2 px-3 py-1 bg-void-950 border border-yellow-400 text-yellow-400 text-xs font-bold tracking-widest uppercase rounded opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 shadow-[0_0_15px_rgba(250,204,21,0.3)] z-20 pointer-events-none whitespace-nowrap">
+             Ravens
+           </div>
+
+           <div class="text-yellow-500 mb-4 opacity-70 group-hover:opacity-100 transition-opacity">
+             <!-- User/Profile Icon -->
+             <svg class="w-8 h-8 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+           </div>
+           <h3 class="font-display text-xl font-bold text-slate-200 mb-2 group-hover:text-white transition-colors">ABOUT ME</h3>
+           <div class="h-0.5 w-8 bg-slate-700 mx-auto group-hover:bg-yellow-400 transition-colors duration-500"></div>
+        </a>
+      </div>
+
+      <!-- The Eddas Section -->
+      <div class="w-full max-w-5xl mx-auto mb-12">
+          <div class="flex items-center justify-center mb-8">
+              <div class="h-px w-12 bg-slate-800"></div>
+              <h3 class="px-4 font-display text-2xl text-slate-300 tracking-widest">THE EDDAS</h3>
+              <div class="h-px w-12 bg-slate-800"></div>
+          </div>
+          
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <!-- Item 1 -->
+              <a href="#" target="_blank" class="block p-4 border border-slate-800 bg-slate-900/20 rounded-sm hover:border-slate-600 transition-colors group">
+                  <div class="text-cosmic-400 font-display font-bold text-lg mb-1 group-hover:text-white transition-colors">HUGINN</div>
+                  <div class="text-xs text-slate-500">Philosophy & Thought</div>
+              </a>
+              <!-- Item 2 -->
+              <a href="#" target="_blank" class="block p-4 border border-slate-800 bg-slate-900/20 rounded-sm hover:border-slate-600 transition-colors group">
+                  <div class="text-cosmic-400 font-display font-bold text-lg mb-1 group-hover:text-white transition-colors">MUNINN</div>
+                  <div class="text-xs text-slate-500">Memory & Database</div>
+              </a>
+              <!-- Item 3 -->
+              <a href="#" target="_blank" class="block p-4 border border-slate-800 bg-slate-900/20 rounded-sm hover:border-slate-600 transition-colors group">
+                  <div class="text-life-400 font-display font-bold text-lg mb-1 group-hover:text-white transition-colors">GUNGNIR</div>
+                  <div class="text-xs text-slate-500">Accuracy & Testing</div>
+              </a>
+              <!-- Item 4 -->
+              <a href="#" target="_blank" class="block p-4 border border-slate-800 bg-slate-900/20 rounded-sm hover:border-slate-600 transition-colors group">
+                  <div class="text-life-400 font-display font-bold text-lg mb-1 group-hover:text-white transition-colors">EIR</div>
+                  <div class="text-xs text-slate-500">System Recovery</div>
+              </a>
+              <!-- Item 5 -->
+              <a href="#" target="_blank" class="block p-4 border border-slate-800 bg-slate-900/20 rounded-sm hover:border-slate-600 transition-colors group">
+                  <div class="text-nebula-400 font-display font-bold text-lg mb-1 group-hover:text-white transition-colors">SKÍÐBLAÐNIR</div>
+                  <div class="text-xs text-slate-500">Scalable Containers</div>
+              </a>
+              <!-- Item 6 -->
+              <a href="#" target="_blank" class="block p-4 border border-slate-800 bg-slate-900/20 rounded-sm hover:border-slate-600 transition-colors group">
+                  <div class="text-nebula-400 font-display font-bold text-lg mb-1 group-hover:text-white transition-colors">MJÖLNIR</div>
+                  <div class="text-xs text-slate-500">Infrastructure Power</div>
+              </a>
+              <!-- Item 7 -->
+              <a href="#" target="_blank" class="block p-4 border border-slate-800 bg-slate-900/20 rounded-sm hover:border-slate-600 transition-colors group">
+                  <div class="text-slate-300 font-display font-bold text-lg mb-1 group-hover:text-white transition-colors">HEIMDALL</div>
+                  <div class="text-xs text-slate-500">Security Monitoring</div>
+              </a>
+              <!-- Item 8 -->
+              <a href="#" target="_blank" class="block p-4 border border-slate-800 bg-slate-900/20 rounded-sm hover:border-slate-600 transition-colors group">
+                  <div class="text-slate-300 font-display font-bold text-lg mb-1 group-hover:text-white transition-colors">VALHALLA</div>
+                  <div class="text-xs text-slate-500">Continuous Deployment</div>
+              </a>
+          </div>
+      </div>
+
+    </main>
+
+    <footer class="w-full py-8 border-t border-white/5 relative z-10">
+        <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="text-xs text-slate-600 font-mono">© 2024 SUNEATER.IO</div>
+            <div class="flex gap-6">
+                <a href="https://linkedin.com" target="_blank" class="text-xs font-bold tracking-widest text-slate-600 hover:text-slate-300 uppercase transition-colors">LinkedIn</a>
+                <a href="https://github.com" target="_blank" class="text-xs font-bold tracking-widest text-slate-600 hover:text-slate-300 uppercase transition-colors">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const canvas = document.getElementById('starfield');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        let mouseX = 0;
+        let mouseY = 0;
+
+        function resize(){ 
+            canvas.width=window.innerWidth; 
+            canvas.height=window.innerHeight; 
+            init(); 
+        }
+
+        function init(){
+            particles=[]; 
+            // Increased density slightly
+            const n=Math.floor((canvas.width*canvas.height)/8000);
+            for(let i=0;i<n;i++) {
+                particles.push({
+                    x: Math.random()*canvas.width, 
+                    y: Math.random()*canvas.height, 
+                    baseSize: Math.random()*1.5 + 0.5, 
+                    s: 0, // current size
+                    v: Math.random()*0.2 + 0.05, // vertical velocity
+                    o: Math.random()*0.8 + 0.1, // base opacity
+                    twinkleSpeed: Math.random() * 0.05 + 0.01,
+                    twinklePhase: Math.random() * Math.PI * 2,
+                    parallaxFactor: Math.random() * 0.05 // How much mouse affects this star
+                });
+                particles[i].s = particles[i].baseSize;
+            }
+        }
+
+        function draw(){
+            ctx.clearRect(0,0,canvas.width,canvas.height);
+            
+            // Subtle movement based on mouse (Parallax)
+            const targetXOffset = (mouseX - canvas.width/2) * 0.1;
+            const targetYOffset = (mouseY - canvas.height/2) * 0.1;
+
+            particles.forEach(p=>{
+                // Twinkle logic
+                p.twinklePhase += p.twinkleSpeed;
+                const twinkleOpacity = p.o + Math.sin(p.twinklePhase) * 0.2;
+                const safeOpacity = Math.max(0, Math.min(1, twinkleOpacity));
+
+                // Parallax offset
+                const px = p.x + (targetXOffset * p.parallaxFactor);
+                const py = p.y + (targetYOffset * p.parallaxFactor);
+
+                ctx.globalAlpha = safeOpacity; 
+                ctx.fillStyle = '#e2e8f0'; // slate-200
+                ctx.beginPath(); 
+                ctx.arc(px, py, p.s, 0, Math.PI*2); 
+                ctx.fill();
+                
+                // Movement
+                p.y -= p.v; 
+                if(p.y < -10){
+                    p.y=canvas.height + 10;
+                    p.x=Math.random()*canvas.width;
+                }
+            });
+            requestAnimationFrame(draw);
+        }
+
+        window.addEventListener('resize',resize); 
+        
+        // Track mouse for parallax
+        window.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+        // Initialize center mouse to avoid jump
+        mouseX = window.innerWidth / 2;
+        mouseY = window.innerHeight / 2;
+
+        resize(); 
+        draw();
+    </script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
