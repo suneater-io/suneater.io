@@ -7,17 +7,27 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <script>
-      tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Cinzel', 'serif'] }, colors: { void: { 950: '#020617' } } } } }
+      tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Cinzel', 'serif'] }, colors: { void: { 950: '#020617' }, cosmic: { 400: '#38bdf8' }, life: { 400: '#4ade80' }, nebula: { 400: '#a78bfa' } } } } }
     </script>
     <style>body{background-color:#020617;color:#94a3b8;}</style>
 </head>
 <body class="bg-void-950 flex flex-col min-h-screen">
     <canvas id="starfield" class="fixed top-0 left-0 w-full h-full -z-10 pointer-events-none"></canvas>
 
-    <nav class="fixed top-0 left-0 w-full z-50 py-6 bg-void-950/90 border-b border-white/10">
-        <div class="max-w-5xl mx-auto px-6">
-            <a href="index.html" class="text-xs font-bold tracking-widest text-slate-500 hover:text-white uppercase">&larr; Return to The Cosmic Hall</a>
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full z-50 py-6 bg-void-950/80 backdrop-blur-sm border-b border-white/5">
+      <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+        <a href="index.html" class="font-display font-bold text-xl tracking-widest text-slate-100 hover:text-white transition-colors">
+          SUN<span class="text-cosmic-400">EATER</span>
+        </a>
+        <div class="hidden md:flex gap-8 text-xs font-bold tracking-widest uppercase text-slate-500">
+          <a href="webex.html" class="hover:text-cosmic-400 transition-colors duration-300">Webex CC</a>
+          <a href="health.html" class="hover:text-life-400 transition-colors duration-300">Health</a>
+          <a href="ai.html" class="hover:text-nebula-400 transition-colors duration-300">AI & Automation</a>
+          <a href="github.html" class="text-white transition-colors duration-300">GitHub</a>
+          <a href="contact.html" class="hover:text-yellow-400 transition-colors duration-300">About Me</a>
         </div>
+      </div>
     </nav>
 
     <main class="flex-grow max-w-5xl mx-auto px-6 pt-32 pb-24 w-full">
@@ -56,7 +66,7 @@
 
     <footer class="w-full py-8 border-t border-white/5 relative z-10 bg-void-950">
         <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
-            <div class="text-xs text-slate-600 font-mono">© 2024 SUNEATER.IO</div>
+            <div class="text-xs text-slate-600 font-mono">© 2025 SUNEATER.IO</div>
             <div class="flex gap-6">
                 <a href="https://linkedin.com" target="_blank" class="text-xs font-bold tracking-widest text-slate-600 hover:text-slate-300 uppercase transition-colors">LinkedIn</a>
                 <a href="https://github.com" target="_blank" class="text-xs font-bold tracking-widest text-slate-600 hover:text-slate-300 uppercase transition-colors">GitHub</a>
