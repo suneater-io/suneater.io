@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Suneater | Contact</title>
+    <title>Suneater | About Me</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <script>
@@ -20,17 +20,66 @@
         </div>
     </nav>
 
-    <main class="flex-grow max-w-2xl mx-auto px-6 pt-40 pb-24 text-center w-full">
-        <div class="inline-block px-3 py-1 border border-yellow-400/30 rounded-sm bg-yellow-900/20 text-yellow-400 text-xs font-bold tracking-widest mb-6">REALM V</div>
-        <h1 class="font-display text-5xl md:text-6xl font-bold text-slate-100 mb-6">Contact</h1>
-        <p class="text-xl text-slate-400 font-light mb-12">
-            Send a Raven. Available for consulting on AI strategy, Webex CC, and Integrated Health systems.
-        </p>
+    <main class="flex-grow max-w-5xl mx-auto px-6 pt-32 pb-24 w-full">
+        <header class="mb-16 text-center md:text-left">
+            <div class="inline-block px-3 py-1 border border-yellow-400/30 rounded-sm bg-yellow-900/20 text-yellow-400 text-xs font-bold tracking-widest mb-6">REALM V</div>
+            <h1 class="font-display text-5xl md:text-6xl font-bold text-slate-100 mb-6">About Me</h1>
+            <p class="text-xl text-slate-400 font-light max-w-2xl">
+                The Architect. Balancing the precision of code with the chaos of creation.
+            </p>
+        </header>
 
-        <div class="bg-slate-900/30 border border-yellow-600/20 p-8 rounded-sm">
-             <h2 class="text-xs font-mono text-slate-500 uppercase tracking-widest mb-6 border-b border-white/10 pb-2">Summoning Rituals (Direct)</h2>
+        <div class="grid md:grid-cols-2 gap-16 mb-20">
+            <!-- Professional -->
+            <section>
+                <h2 class="text-yellow-400 font-display text-2xl font-bold mb-6 flex items-center gap-3">
+                    <span class="w-8 h-px bg-yellow-400"></span>
+                    The Professional
+                </h2>
+                <div class="space-y-6 text-slate-400 leading-relaxed">
+                    <p>
+                        I specialize in unbinding complex systems. My work spans the high-velocity world of 
+                        <strong class="text-slate-200">Webex Contact Center</strong> orchestration and the critical, 
+                        regulated landscape of <strong class="text-slate-200">Integrated Health</strong>.
+                    </p>
+                    <p>
+                        Whether it's designing FHIR-compliant data pipelines or deploying AI agents to triage support tickets, 
+                        my philosophy is simple: <em>Eliminate the noise.</em>
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="px-2 py-1 bg-slate-800 text-xs text-slate-300 border border-slate-700 rounded-sm">Python</span>
+                        <span class="px-2 py-1 bg-slate-800 text-xs text-slate-300 border border-slate-700 rounded-sm">TypeScript</span>
+                        <span class="px-2 py-1 bg-slate-800 text-xs text-slate-300 border border-slate-700 rounded-sm">HL7/FHIR</span>
+                        <span class="px-2 py-1 bg-slate-800 text-xs text-slate-300 border border-slate-700 rounded-sm">Webex CC</span>
+                        <span class="px-2 py-1 bg-slate-800 text-xs text-slate-300 border border-slate-700 rounded-sm">LLMs</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Personal -->
+            <section>
+                <h2 class="text-yellow-400 font-display text-2xl font-bold mb-6 flex items-center gap-3">
+                    <span class="w-8 h-px bg-yellow-400"></span>
+                    The Personal
+                </h2>
+                <div class="space-y-6 text-slate-400 leading-relaxed">
+                    <p>
+                        Why <strong>Suneater</strong>? In Norse mythology, Fenrir is the breaker of chains. 
+                        I view automation as the modern equivalent—shattering the repetitive loops that bind human potential.
+                    </p>
+                    <p>
+                        When I'm not architecting solutions, I'm delving into the archives of history, studying the 
+                        philosophies of the Eddas, or refining my own digital grimoire of code.
+                    </p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Contact Section -->
+        <section class="bg-slate-900/30 border border-yellow-600/20 p-8 rounded-sm max-w-2xl mx-auto">
+             <h2 class="text-xs font-mono text-slate-500 uppercase tracking-widest mb-6 border-b border-white/10 pb-2">Summoning Rituals (Contact)</h2>
              
-             <div class="space-y-6">
+             <div class="space-y-4">
                  <a href="mailto:contact@suneater.io" class="flex items-center gap-4 p-4 hover:bg-yellow-400/5 rounded-sm transition-colors group">
                      <svg class="w-6 h-6 text-slate-600 group-hover:text-yellow-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                      <div class="text-left">
@@ -47,7 +96,7 @@
                      </div>
                  </a>
              </div>
-        </div>
+        </section>
     </main>
 
     <footer class="w-full py-8 border-t border-white/5 relative z-10 bg-void-950">
