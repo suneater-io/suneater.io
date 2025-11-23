@@ -32,13 +32,34 @@
     </nav>
 
     <main class="flex-grow max-w-5xl mx-auto px-6 pt-32 pb-24 w-full animate-fadeInUp">
-        <header class="mb-16 text-center md:text-left">
+        <!-- Header -->
+        <header class="mb-12 text-center">
             <div class="inline-block px-3 py-1 border border-yellow-400/30 rounded-sm bg-yellow-900/20 text-yellow-400 text-xs font-bold tracking-widest mb-6">REALM VI</div>
             <h1 class="font-display text-5xl md:text-6xl font-bold text-slate-100 mb-6">About Me</h1>
-            <p class="text-xl text-slate-400 font-light max-w-2xl">
+            <p class="text-xl text-slate-400 font-light max-w-2xl mx-auto">
                 The Architect. Balancing the precision of code with the chaos of creation.
             </p>
         </header>
+
+        <!-- Profile Image Section -->
+        <div class="w-full flex justify-center mb-20 relative z-10">
+            <div class="relative w-64 h-64 group">
+                 <!-- Decorative Outer Glow -->
+                 <div class="absolute inset-0 rounded-full bg-yellow-400/10 blur-xl group-hover:bg-yellow-400/20 transition-colors duration-500"></div>
+                 
+                 <!-- Rotating Ring -->
+                 <div class="absolute -inset-4 rounded-full border border-dashed border-slate-800 group-hover:border-yellow-400/30 transition-colors duration-500 animate-[spin_20s_linear_infinite]"></div>
+                 
+                 <!-- Static Ring -->
+                 <div class="absolute inset-0 rounded-full border border-yellow-400/20 group-hover:border-yellow-400/50 transition-colors duration-500 scale-105"></div>
+
+                 <!-- Image Container -->
+                 <div class="relative w-full h-full rounded-full overflow-hidden border-2 border-slate-800 group-hover:border-yellow-400 transition-colors duration-500 bg-void-950 shadow-2xl">
+                      <!-- PLACEHOLDER IMAGE: Replace 'src' with your actual image URL -->
+                      <img src="https://via.placeholder.com/500x500/0f172a/fbbf24?text=GRANT" alt="Grant" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-500 grayscale group-hover:grayscale-0">
+                 </div>
+            </div>
+        </div>
 
         <div class="grid md:grid-cols-2 gap-16 mb-20">
             <!-- Professional -->
