@@ -23,10 +23,15 @@
                 float: {
                     '0%, 100%': { transform: 'translateY(0)' },
                     '50%': { transform: 'translateY(-10px)' },
+                },
+                fadeInUp: {
+                    '0%': { opacity: '0', transform: 'translateY(10px)' },
+                    '100%': { opacity: '1', transform: 'translateY(0)' },
                 }
             },
             animation: {
                 float: 'float 6s ease-in-out infinite',
+                fadeInUp: 'fadeInUp 0.5s ease-out forwards',
             }
           },
         },
@@ -60,15 +65,15 @@
     </nav>
 
     <!-- Hero Section -->
-    <main class="flex-grow flex flex-col justify-center items-center text-center px-6 pt-32 pb-20 relative">
+    <main class="flex-grow flex flex-col justify-center items-center text-center px-6 pt-32 pb-20 relative animate-fadeInUp">
       
       <!-- Central Sigil / Logo Area -->
       <div class="mb-12 relative animate-float">
-        <div class="w-80 h-80 mx-auto flex items-center justify-center relative z-10">
-            <img src="https://i.ibb.co/hFYbhsXc/suneaterlogo.png" alt="Suneater Logo" class="w-full h-full object-contain opacity-90 hover:opacity-100 transition-opacity duration-500 drop-shadow-[0_0_25px_rgba(56,189,248,0.2)]">
+        <div class="w-96 h-96 mx-auto flex items-center justify-center relative z-10">
+            <img src="https://raw.githubusercontent.com/suneater-io/suneater.io/refs/heads/main/suneater_logo_header.png" alt="Suneater Logo" class="w-full h-full object-contain opacity-90 hover:opacity-100 transition-opacity duration-500 drop-shadow-[0_0_25px_rgba(56,189,248,0.2)]">
         </div>
         <!-- Glow behind sigil -->
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cosmic-500/10 blur-3xl -z-0 rounded-full"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[26rem] h-[26rem] bg-cosmic-500/10 blur-3xl -z-0 rounded-full"></div>
       </div>
 
       <h2 class="font-display text-5xl md:text-7xl font-bold text-slate-100 mb-6 tracking-tight">
