@@ -10,13 +10,19 @@
     <script>
       tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Cinzel', 'serif'] }, colors: { void: { 950: '#020617' }, cosmic: { 400: '#38bdf8' }, life: { 400: '#4ade80' }, nebula: { 400: '#a78bfa' }, forge: { 400: '#fb923c', 500: '#f97316', 900: '#7c2d12' } }, keyframes: { fadeInUp: { '0%': { opacity: '0', transform: 'translateY(10px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } } }, animation: { fadeInUp: 'fadeInUp 0.5s ease-out forwards' } } } }
     </script>
-    <style>body{background-color:#020617;color:#94a3b8;}</style>
+    <style>
+      body { 
+        background-color: #000000;
+        background-image: radial-gradient(circle at 50% 50%, #1c1503 0%, #000000 90%);
+        color: #94a3b8; 
+      }
+    </style>
 </head>
-<body class="bg-void-950 flex flex-col min-h-screen">
+<body class="bg-black flex flex-col min-h-screen">
     <canvas id="starfield" class="fixed top-0 left-0 w-full h-full -z-10 pointer-events-none"></canvas>
 
     <!-- Navigation -->
-    <nav class="fixed top-0 left-0 w-full z-50 py-6 bg-void-950/80 backdrop-blur-sm border-b border-white/5">
+    <nav class="fixed top-0 left-0 w-full z-50 py-6 bg-black/80 backdrop-blur-sm border-b border-white/5">
       <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
         <a href="index.html" class="font-display font-bold text-xl tracking-widest text-slate-100 hover:text-white transition-colors">
           SUN<span class="text-cosmic-400">EATER</span>
@@ -35,9 +41,9 @@
     <main class="flex-grow max-w-5xl mx-auto px-6 pt-32 pb-24 w-full animate-fadeInUp">
         <!-- Header -->
         <header class="mb-12 text-center">
-            <div class="inline-block px-3 py-1 border border-yellow-400/30 rounded-sm bg-yellow-900/20 text-yellow-400 text-xs font-bold tracking-widest mb-6">REALM VI</div>
-            <h1 class="font-display text-5xl md:text-6xl font-bold text-slate-100 mb-6">About Me</h1>
-            <p class="text-xl text-slate-400 font-light max-w-2xl mx-auto">
+            <div class="inline-block px-3 py-1 border border-yellow-800 rounded-sm bg-yellow-900/10 text-yellow-600 text-xs font-bold tracking-widest mb-6">REALM VI</div>
+            <h1 class="font-display text-5xl md:text-6xl font-bold text-slate-200 mb-6">About Me</h1>
+            <p class="text-xl text-slate-500 font-light max-w-2xl mx-auto">
                 The Architect. Balancing the precision of code with the chaos of creation.
             </p>
         </header>
@@ -46,18 +52,18 @@
         <div class="w-full flex justify-center mb-20 relative z-10">
             <div class="relative w-64 h-64 group">
                  <!-- Decorative Outer Glow -->
-                 <div class="absolute inset-0 rounded-full bg-yellow-400/10 blur-xl group-hover:bg-yellow-400/20 transition-colors duration-500"></div>
+                 <div class="absolute inset-0 rounded-full bg-yellow-900/20 blur-xl group-hover:bg-yellow-700/30 transition-colors duration-500"></div>
                  
                  <!-- Rotating Ring -->
-                 <div class="absolute -inset-4 rounded-full border border-dashed border-slate-800 group-hover:border-yellow-400/30 transition-colors duration-500 animate-[spin_20s_linear_infinite]"></div>
+                 <div class="absolute -inset-4 rounded-full border border-dashed border-slate-800 group-hover:border-yellow-700/30 transition-colors duration-500 animate-[spin_20s_linear_infinite]"></div>
                  
                  <!-- Static Ring -->
-                 <div class="absolute inset-0 rounded-full border border-yellow-400/20 group-hover:border-yellow-400/50 transition-colors duration-500 scale-105"></div>
+                 <div class="absolute inset-0 rounded-full border border-yellow-800/20 group-hover:border-yellow-600/50 transition-colors duration-500 scale-105"></div>
 
                  <!-- Image Container -->
-                 <div class="relative w-full h-full rounded-full overflow-hidden border-2 border-slate-800 group-hover:border-yellow-400 transition-colors duration-500 bg-void-950 shadow-2xl">
+                 <div class="relative w-full h-full rounded-full overflow-hidden border-2 border-slate-800 group-hover:border-yellow-700 transition-colors duration-500 bg-void-950 shadow-2xl">
                       <!-- PLACEHOLDER IMAGE: Replace 'src' with your actual image URL -->
-                      <img src="https://via.placeholder.com/500x500/0f172a/fbbf24?text=GRANT" alt="Grant" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-500 grayscale group-hover:grayscale-0">
+                      <img src="https://via.placeholder.com/500x500/0f172a/fbbf24?text=GRANT" alt="Grant" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500 grayscale group-hover:grayscale-0">
                  </div>
             </div>
         </div>
@@ -65,37 +71,37 @@
         <div class="grid md:grid-cols-2 gap-16 mb-20">
             <!-- Professional -->
             <section>
-                <h2 class="text-yellow-400 font-display text-2xl font-bold mb-6 flex items-center gap-3">
-                    <span class="w-8 h-px bg-yellow-400"></span>
+                <h2 class="text-yellow-600 font-display text-2xl font-bold mb-6 flex items-center gap-3">
+                    <span class="w-8 h-px bg-yellow-800"></span>
                     The Professional
                 </h2>
-                <div class="space-y-6 text-slate-400 leading-relaxed">
+                <div class="space-y-6 text-slate-500 leading-relaxed">
                     <p>
                         I specialize in unbinding complex systems. My work spans the high-velocity world of 
-                        <strong class="text-slate-200">Webex Contact Center</strong> orchestration and the critical, 
-                        regulated landscape of <strong class="text-slate-200">Integrated Health</strong>.
+                        <strong class="text-slate-300">Webex Contact Center</strong> orchestration and the critical, 
+                        regulated landscape of <strong class="text-slate-300">Integrated Health</strong>.
                     </p>
                     <p>
                         Whether it's designing FHIR-compliant data pipelines or deploying AI agents to triage support tickets, 
                         my philosophy is simple: <em>Eliminate the noise.</em>
                     </p>
                     <div class="flex flex-wrap gap-2 mt-4">
-                        <span class="px-2 py-1 bg-slate-800 text-xs text-slate-300 border border-slate-700 rounded-sm">Python</span>
-                        <span class="px-2 py-1 bg-slate-800 text-xs text-slate-300 border border-slate-700 rounded-sm">TypeScript</span>
-                        <span class="px-2 py-1 bg-slate-800 text-xs text-slate-300 border border-slate-700 rounded-sm">HL7/FHIR</span>
-                        <span class="px-2 py-1 bg-slate-800 text-xs text-slate-300 border border-slate-700 rounded-sm">Webex CC</span>
-                        <span class="px-2 py-1 bg-slate-800 text-xs text-slate-300 border border-slate-700 rounded-sm">LLMs</span>
+                        <span class="px-2 py-1 bg-slate-900 text-xs text-slate-400 border border-slate-800 rounded-sm">Python</span>
+                        <span class="px-2 py-1 bg-slate-900 text-xs text-slate-400 border border-slate-800 rounded-sm">TypeScript</span>
+                        <span class="px-2 py-1 bg-slate-900 text-xs text-slate-400 border border-slate-800 rounded-sm">HL7/FHIR</span>
+                        <span class="px-2 py-1 bg-slate-900 text-xs text-slate-400 border border-slate-800 rounded-sm">Webex CC</span>
+                        <span class="px-2 py-1 bg-slate-900 text-xs text-slate-400 border border-slate-800 rounded-sm">LLMs</span>
                     </div>
                 </div>
             </section>
 
             <!-- Personal -->
             <section>
-                <h2 class="text-yellow-400 font-display text-2xl font-bold mb-6 flex items-center gap-3">
-                    <span class="w-8 h-px bg-yellow-400"></span>
+                <h2 class="text-yellow-600 font-display text-2xl font-bold mb-6 flex items-center gap-3">
+                    <span class="w-8 h-px bg-yellow-800"></span>
                     The Personal
                 </h2>
-                <div class="space-y-6 text-slate-400 leading-relaxed">
+                <div class="space-y-6 text-slate-500 leading-relaxed">
                     <p>
                         Why <strong>Suneater</strong>? In Norse mythology, Fenrir is the breaker of chains. 
                         I view automation as the modern equivalent—shattering the repetitive loops that bind human potential.
@@ -109,35 +115,35 @@
         </div>
 
         <!-- Contact Section -->
-        <section class="bg-slate-900/30 border border-yellow-600/20 p-8 rounded-sm max-w-2xl mx-auto">
-             <h2 class="text-xs font-mono text-slate-500 uppercase tracking-widest mb-6 border-b border-white/10 pb-2">Summoning Rituals (Contact)</h2>
+        <section class="bg-slate-900/20 border border-slate-900 p-8 rounded-sm max-w-2xl mx-auto">
+             <h2 class="text-xs font-mono text-slate-600 uppercase tracking-widest mb-6 border-b border-white/5 pb-2">Summoning Rituals (Contact)</h2>
              
              <div class="space-y-4">
-                 <a href="mailto:contact@suneater.io" class="flex items-center gap-4 p-4 hover:bg-yellow-400/5 rounded-sm transition-colors group">
-                     <svg class="w-6 h-6 text-slate-600 group-hover:text-yellow-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                 <a href="mailto:contact@suneater.io" class="flex items-center gap-4 p-4 hover:bg-yellow-900/10 rounded-sm transition-colors group">
+                     <svg class="w-6 h-6 text-slate-700 group-hover:text-yellow-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                      <div class="text-left">
-                         <div class="text-slate-200 font-bold group-hover:text-yellow-400 transition-colors">Howl at the Void</div>
-                         <div class="text-slate-500 text-sm">contact@suneater.io</div>
+                         <div class="text-slate-300 font-bold group-hover:text-yellow-600 transition-colors">Howl at the Void</div>
+                         <div class="text-slate-600 text-sm">contact@suneater.io</div>
                      </div>
                  </a>
 
-                 <a href="https://www.linkedin.com/in/grant-hansen-suneater/" target="_blank" class="flex items-center gap-4 p-4 hover:bg-yellow-400/5 rounded-sm transition-colors group">
-                     <svg class="w-6 h-6 text-slate-600 group-hover:text-yellow-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path><circle cx="4" cy="4" r="2"></circle></svg>
+                 <a href="https://www.linkedin.com/in/grant-hansen-suneater/" target="_blank" class="flex items-center gap-4 p-4 hover:bg-yellow-900/10 rounded-sm transition-colors group">
+                     <svg class="w-6 h-6 text-slate-700 group-hover:text-yellow-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path><circle cx="4" cy="4" r="2"></circle></svg>
                      <div class="text-left">
-                         <div class="text-slate-200 font-bold group-hover:text-yellow-400 transition-colors">Blood Pact (LinkedIn)</div>
-                         <div class="text-slate-500 text-sm">Professional Alliance</div>
+                         <div class="text-slate-300 font-bold group-hover:text-yellow-600 transition-colors">Blood Pact (LinkedIn)</div>
+                         <div class="text-slate-600 text-sm">Professional Alliance</div>
                      </div>
                  </a>
              </div>
         </section>
     </main>
 
-    <footer class="w-full py-8 border-t border-white/5 relative z-10 bg-void-950">
+    <footer class="w-full py-8 border-t border-slate-900 relative z-10 bg-black">
         <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
-            <div class="text-xs text-slate-600 font-mono">© 2025 SUNEATER.IO</div>
+            <div class="text-xs text-slate-800 font-mono">© 2025 SUNEATER.IO</div>
             <div class="flex gap-6">
-                <a href="https://www.linkedin.com/in/grant-hansen-suneater/" target="_blank" class="text-xs font-bold tracking-widest text-slate-600 hover:text-slate-300 uppercase transition-colors">LinkedIn</a>
-                <a href="https://github.com/suneater-io/" target="_blank" class="text-xs font-bold tracking-widest text-slate-600 hover:text-slate-300 uppercase transition-colors">GitHub</a>
+                <a href="https://www.linkedin.com/in/grant-hansen-suneater/" target="_blank" class="text-xs font-bold tracking-widest text-slate-700 hover:text-slate-400 uppercase transition-colors">LinkedIn</a>
+                <a href="https://github.com/suneater-io/" target="_blank" class="text-xs font-bold tracking-widest text-slate-700 hover:text-slate-400 uppercase transition-colors">GitHub</a>
             </div>
         </div>
     </footer>
@@ -146,23 +152,28 @@
         const canvas = document.getElementById('starfield');
         const ctx = canvas.getContext('2d');
         let particles = [];
+        // Dark gold, bronze, brown
+        const colors = ['#854d0e', '#713f12', '#422006', '#2b1c03'];
+        
         function resize(){ canvas.width=window.innerWidth; canvas.height=window.innerHeight; init(); }
         function init(){
-            particles=[]; const n=Math.floor((canvas.width*canvas.height)/9000);
+            particles=[]; const n=Math.floor((canvas.width*canvas.height)/8000);
             for(let i=0;i<n;i++) particles.push({
                 x: Math.random()*canvas.width, 
                 y: Math.random()*canvas.height, 
-                s: Math.random()*1.5, 
-                v: Math.random()*0.2+0.05, 
-                o: Math.random()*0.8, 
-                c: '#fbbf24'
+                s: Math.random()*2 + 0.5, 
+                v: Math.random()*0.15 + 0.02, 
+                o: Math.random()*0.6 + 0.1, 
+                c: colors[Math.floor(Math.random()*colors.length)]
             });
         }
         function draw(){
             ctx.clearRect(0,0,canvas.width,canvas.height);
             particles.forEach(p=>{
                 ctx.globalAlpha=p.o; ctx.fillStyle = p.c; ctx.beginPath(); ctx.arc(p.x,p.y,p.s,0,Math.PI*2); ctx.fill();
-                p.y -= p.v; if(p.y<0){p.y=canvas.height;p.x=Math.random()*canvas.width;}
+                p.y -= p.v; 
+                p.x += Math.sin(p.y * 0.01) * 0.1;
+                if(p.y<0){p.y=canvas.height;p.x=Math.random()*canvas.width;}
             });
             requestAnimationFrame(draw);
         }

@@ -10,13 +10,19 @@
     <script>
       tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Cinzel', 'serif'] }, colors: { void: { 950: '#020617' }, cosmic: { 400: '#38bdf8' }, life: { 400: '#4ade80', 900: '#14532d' }, nebula: { 400: '#a78bfa' }, forge: { 400: '#fb923c', 500: '#f97316', 900: '#7c2d12' } }, keyframes: { fadeInUp: { '0%': { opacity: '0', transform: 'translateY(10px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } } }, animation: { fadeInUp: 'fadeInUp 0.5s ease-out forwards' } } } }
     </script>
-    <style>body{background-color:#020617;color:#94a3b8;}</style>
+    <style>
+      body { 
+        background-color: #000000;
+        background-image: radial-gradient(circle at 50% 50%, #031405 0%, #000000 90%);
+        color: #94a3b8; 
+      }
+    </style>
 </head>
-<body class="bg-void-950 flex flex-col min-h-screen">
+<body class="bg-black flex flex-col min-h-screen">
     <canvas id="starfield" class="fixed top-0 left-0 w-full h-full -z-10 pointer-events-none"></canvas>
 
     <!-- Navigation -->
-    <nav class="fixed top-0 left-0 w-full z-50 py-6 bg-void-950/80 backdrop-blur-sm border-b border-white/5">
+    <nav class="fixed top-0 left-0 w-full z-50 py-6 bg-black/80 backdrop-blur-sm border-b border-white/5">
       <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
         <a href="index.html" class="font-display font-bold text-xl tracking-widest text-slate-100 hover:text-white transition-colors">
           SUN<span class="text-cosmic-400">EATER</span>
@@ -34,62 +40,62 @@
 
     <main class="flex-grow max-w-5xl mx-auto px-6 pt-32 pb-24 w-full animate-fadeInUp">
         <header class="mb-16">
-            <div class="inline-block px-3 py-1 border border-life-400/30 rounded-sm bg-life-900/20 text-life-400 text-xs font-bold tracking-widest mb-6">REALM II</div>
-            <h1 class="font-display text-5xl md:text-6xl font-bold text-slate-100 mb-6">Integrated Health</h1>
-            <p class="text-xl text-slate-400 font-light max-w-2xl">Yggdrasil. The World Tree connecting all realms. I connect systems via HL7 & FHIR.</p>
+            <div class="inline-block px-3 py-1 border border-life-900/50 rounded-sm bg-life-900/10 text-life-700 text-xs font-bold tracking-widest mb-6">REALM II</div>
+            <h1 class="font-display text-5xl md:text-6xl font-bold text-slate-200 mb-6">Integrated Health</h1>
+            <p class="text-xl text-slate-500 font-light max-w-2xl">Yggdrasil. The World Tree connecting all realms. I connect systems via HL7 & FHIR.</p>
         </header>
 
         <!-- Resource Uplink -->
         <section class="mb-20">
-            <h2 class="text-xs font-mono text-slate-600 uppercase tracking-widest mb-6 border-b border-white/5 pb-2">Lifeblood Channels (Resources)</h2>
+            <h2 class="text-xs font-mono text-slate-700 uppercase tracking-widest mb-6 border-b border-white/5 pb-2">Lifeblood Channels (Resources)</h2>
             <div class="grid gap-4">
-                <a href="https://hl7.org/fhir/" target="_blank" class="group block p-6 bg-slate-900/30 border border-slate-800 hover:border-life-400/50 transition-colors rounded-sm">
+                <a href="https://hl7.org/fhir/" target="_blank" class="group block p-6 bg-slate-900/20 border border-slate-900 hover:border-life-900 transition-colors rounded-sm">
                     <div class="flex justify-between items-start mb-2">
-                        <span class="font-bold text-slate-200 group-hover:text-life-400 transition-colors">HL7 FHIR Standard</span>
-                        <svg class="w-4 h-4 text-slate-600 group-hover:text-life-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        <span class="font-bold text-slate-400 group-hover:text-life-400 transition-colors">HL7 FHIR Standard</span>
+                        <svg class="w-4 h-4 text-slate-700 group-hover:text-life-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                     </div>
-                    <p class="text-sm text-slate-500">The foundational language for healthcare data exchange.</p>
+                    <p class="text-sm text-slate-600">The foundational language for healthcare data exchange.</p>
                 </a>
                 
-                <a href="#" class="group block p-6 bg-slate-900/30 border border-slate-800 hover:border-life-400/50 transition-colors rounded-sm">
+                <a href="#" class="group block p-6 bg-slate-900/20 border border-slate-900 hover:border-life-900 transition-colors rounded-sm">
                     <div class="flex justify-between items-start mb-2">
-                        <span class="font-bold text-slate-200 group-hover:text-life-400 transition-colors">Ratatoskr's Messenger (Mirth)</span>
-                        <svg class="w-4 h-4 text-slate-600 group-hover:text-life-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        <span class="font-bold text-slate-400 group-hover:text-life-400 transition-colors">Ratatoskr's Messenger (Mirth)</span>
+                        <svg class="w-4 h-4 text-slate-700 group-hover:text-life-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                     </div>
-                    <p class="text-sm text-slate-500">Alchemy for transforming HL7 v2 into modern JSON. Moving messages up and down the trunk.</p>
+                    <p class="text-sm text-slate-600">Alchemy for transforming HL7 v2 into modern JSON. Moving messages up and down the trunk.</p>
                 </a>
             </div>
         </section>
 
         <!-- Detailed Content -->
         <section class="grid md:grid-cols-2 gap-12 items-center">
-            <div class="p-8 bg-slate-900/50 border border-life-400/20 rounded-sm relative overflow-hidden">
-                <div class="absolute top-0 left-0 w-full h-1 bg-life-400 animate-pulse"></div>
-                <div class="font-mono text-xs text-life-400/80 space-y-2">
+            <div class="p-8 bg-slate-900/30 border border-life-900/30 rounded-sm relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-1 bg-life-900 animate-pulse"></div>
+                <div class="font-mono text-xs text-life-400/60 space-y-2">
                     <div>GET /Warrior/10293</div>
-                    <div class="pl-4 text-slate-600">{</div>
-                    <div class="pl-8 text-slate-500">"resourceType": "Warrior",</div>
-                    <div class="pl-8 text-slate-500">"status": "active",</div>
-                    <div class="pl-8 text-slate-500">"clan": [{"name": "Doe"}]</div>
-                    <div class="pl-4 text-slate-600">}</div>
-                    <div class="text-white mt-4">> 200 OK (14ms)</div>
+                    <div class="pl-4 text-slate-700">{</div>
+                    <div class="pl-8 text-slate-600">"resourceType": "Warrior",</div>
+                    <div class="pl-8 text-slate-600">"status": "active",</div>
+                    <div class="pl-8 text-slate-600">"clan": [{"name": "Doe"}]</div>
+                    <div class="pl-4 text-slate-700">}</div>
+                    <div class="text-slate-500 mt-4">> 200 OK (14ms)</div>
                 </div>
             </div>
             <div class="space-y-6">
-                <h3 class="font-display text-2xl text-slate-100">Norns' Weaving (Interoperability)</h3>
-                <p class="text-slate-400 leading-relaxed">
+                <h3 class="font-display text-2xl text-slate-300">Norns' Weaving (Interoperability)</h3>
+                <p class="text-slate-500 leading-relaxed">
                     Like the roots of the ash tree, data must flow deep and wide. I create HIPAA-compliant middleware that ensures data integrity while speeding up patient intake and result notification.
                 </p>
             </div>
         </section>
     </main>
 
-    <footer class="w-full py-8 border-t border-white/5 relative z-10 bg-void-950">
+    <footer class="w-full py-8 border-t border-slate-900 relative z-10 bg-black">
         <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
-            <div class="text-xs text-slate-600 font-mono">© 2025 SUNEATER.IO</div>
+            <div class="text-xs text-slate-800 font-mono">© 2025 SUNEATER.IO</div>
             <div class="flex gap-6">
-                <a href="https://www.linkedin.com/in/grant-hansen-suneater/" target="_blank" class="text-xs font-bold tracking-widest text-slate-600 hover:text-slate-300 uppercase transition-colors">LinkedIn</a>
-                <a href="https://github.com/suneater-io/" target="_blank" class="text-xs font-bold tracking-widest text-slate-600 hover:text-slate-300 uppercase transition-colors">GitHub</a>
+                <a href="https://www.linkedin.com/in/grant-hansen-suneater/" target="_blank" class="text-xs font-bold tracking-widest text-slate-700 hover:text-slate-400 uppercase transition-colors">LinkedIn</a>
+                <a href="https://github.com/suneater-io/" target="_blank" class="text-xs font-bold tracking-widest text-slate-700 hover:text-slate-400 uppercase transition-colors">GitHub</a>
             </div>
         </div>
     </footer>
@@ -98,23 +104,28 @@
         const canvas = document.getElementById('starfield');
         const ctx = canvas.getContext('2d');
         let particles = [];
+        // Dark greens and deep forest colors
+        const colors = ['#14532d', '#064e3b', '#022c22', '#1a2e05'];
+        
         function resize(){ canvas.width=window.innerWidth; canvas.height=window.innerHeight; init(); }
         function init(){
-            particles=[]; const n=Math.floor((canvas.width*canvas.height)/9000);
+            particles=[]; const n=Math.floor((canvas.width*canvas.height)/8000);
             for(let i=0;i<n;i++) particles.push({
                 x: Math.random()*canvas.width, 
                 y: Math.random()*canvas.height, 
-                s: Math.random()*1.5, 
-                v: Math.random()*0.2+0.05, 
-                o: Math.random()*0.8, 
-                c: '#4ade80'
+                s: Math.random()*2 + 0.5, 
+                v: Math.random()*0.15 + 0.02, 
+                o: Math.random()*0.6 + 0.1, 
+                c: colors[Math.floor(Math.random()*colors.length)]
             });
         }
         function draw(){
             ctx.clearRect(0,0,canvas.width,canvas.height);
             particles.forEach(p=>{
                 ctx.globalAlpha=p.o; ctx.fillStyle = p.c; ctx.beginPath(); ctx.arc(p.x,p.y,p.s,0,Math.PI*2); ctx.fill();
-                p.y -= p.v; if(p.y<0){p.y=canvas.height;p.x=Math.random()*canvas.width;}
+                p.y -= p.v; 
+                p.x += Math.sin(p.y * 0.01) * 0.1;
+                if(p.y<0){p.y=canvas.height;p.x=Math.random()*canvas.width;}
             });
             requestAnimationFrame(draw);
         }
