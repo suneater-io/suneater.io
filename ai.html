@@ -13,7 +13,7 @@
     <style>
       body { 
         background-color: #000000;
-        background-image: radial-gradient(circle at 50% 50%, #150524 0%, #000000 90%);
+        background-image: radial-gradient(circle at 50% 50%, #1a0524 0%, #000000 90%);
         color: #94a3b8; 
       }
     </style>
@@ -25,7 +25,7 @@
     <nav class="fixed top-0 left-0 w-full z-50 py-6 bg-black/80 backdrop-blur-sm border-b border-white/5">
       <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
         <a href="index.html" class="font-display font-bold text-xl tracking-widest text-slate-100 hover:text-white transition-colors">
-          SUN<span class="text-cosmic-400">EATER</span>
+          SUN<span class="text-nebula-400">EATER</span>
         </a>
         <div class="hidden md:flex gap-8 text-xs font-bold tracking-widest uppercase text-slate-500">
           <a href="webex.html" class="hover:text-cosmic-400 transition-colors duration-300">Webex CC</a>
@@ -57,12 +57,12 @@
                     <p class="text-sm text-slate-600">Foundational docs for the spirits powering my swarms.</p>
                 </a>
                 
-                <a href="#" class="group block p-6 bg-slate-900/20 border border-slate-900 hover:border-nebula-900 transition-colors rounded-sm">
+                <a href="https://js.langchain.com/docs/get_started/introduction" target="_blank" class="group block p-6 bg-slate-900/20 border border-slate-900 hover:border-nebula-900 transition-colors rounded-sm">
                     <div class="flex justify-between items-start mb-2">
                         <span class="font-bold text-slate-400 group-hover:text-nebula-400 transition-colors">The Gleipnir Chains (LangChain)</span>
                         <svg class="w-4 h-4 text-slate-700 group-hover:text-nebula-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                     </div>
-                    <p class="text-sm text-slate-600">Architectural bindings to control the raw power of LLMs, just as the dwarves bound Fenrir.</p>
+                    <p class="text-sm text-slate-600">Frameworks for binding models to reality, enabling them to act, not just speak.</p>
                 </a>
             </div>
         </section>
@@ -70,27 +70,39 @@
         <!-- Detailed Content -->
         <section class="grid md:grid-cols-2 gap-12 items-center">
             <div class="space-y-6">
-                <h3 class="font-display text-2xl text-slate-300">Synthetic Wisdom</h3>
+                <h3 class="font-display text-2xl text-slate-300">The Huginn & Muninn Agents</h3>
                 <p class="text-slate-500 leading-relaxed">
-                    I design AI architectures that go beyond simple chatbots. By leveraging RAG (Retrieval-Augmented Generation) and function calling, I build systems that can read your documentation, query your databases, and take action on your behalf.
+                    Thought and Memory. I build agents that maintain context over long conversations and retrieve specific knowledge from your business data.
                 </p>
+                <div class="space-y-2">
+                    <div class="flex items-center gap-3 text-sm text-slate-400">
+                        <span class="w-2 h-2 bg-nebula-900 rounded-full"></span>
+                        <span>RAG (Retrieval Augmented Generation)</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-sm text-slate-400">
+                        <span class="w-2 h-2 bg-nebula-900 rounded-full"></span>
+                        <span>Function Calling & Tool Use</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-sm text-slate-400">
+                        <span class="w-2 h-2 bg-nebula-900 rounded-full"></span>
+                        <span>Multi-Agent Orchestration</span>
+                    </div>
+                </div>
             </div>
             
-            <div class="flex flex-col gap-3">
-                <div class="p-4 bg-slate-900/30 border border-nebula-900/20 rounded-sm flex items-center gap-4">
-                    <div class="w-8 h-8 rounded bg-purple-900 flex items-center justify-center text-purple-200 font-bold border border-purple-700">AI</div>
-                    <div class="text-sm">
-                        <div class="text-slate-200 font-bold">Valkyrie Selection</div>
-                        <div class="text-purple-400/70 text-xs">Ticket Triage (GPT-4o) • 98% Accuracy</div>
-                    </div>
-                </div>
-                <div class="p-4 bg-slate-900/30 border border-nebula-900/20 rounded-sm flex items-center gap-4">
-                    <div class="w-8 h-8 rounded bg-purple-900 flex items-center justify-center text-purple-200 font-bold border border-purple-700">Ag</div>
-                    <div class="text-sm">
-                        <div class="text-slate-200 font-bold">Autonomous Agents</div>
-                        <div class="text-purple-400/70 text-xs">Self-healing workflows • Human-in-the-loop</div>
-                    </div>
-                </div>
+            <!-- Code Block / Visual -->
+            <div class="p-6 bg-slate-950 border border-nebula-900/30 rounded-sm font-mono text-xs relative overflow-hidden group">
+                 <div class="absolute inset-0 bg-nebula-900/5 group-hover:bg-nebula-900/10 transition-colors"></div>
+                 <div class="relative z-10 text-slate-400">
+                     <span class="text-nebula-400">const</span> <span class="text-yellow-200">agent</span> = <span class="text-nebula-400">new</span> <span class="text-blue-300">AgentExecutor</span>({<br>
+                     &nbsp;&nbsp;tools: [<span class="text-green-300">webBrowser</span>, <span class="text-green-300">calculator</span>],<br>
+                     &nbsp;&nbsp;model: <span class="text-orange-300">gpt-4-turbo</span>,<br>
+                     });<br><br>
+                     <span class="text-slate-500">// Executing thought process...</span><br>
+                     <span class="text-nebula-400">await</span> <span class="text-yellow-200">agent</span>.<span class="text-blue-300">call</span>({<br>
+                     &nbsp;&nbsp;input: <span class="text-green-200">"Analyze the competitor's pricing."</span><br>
+                     });
+                 </div>
             </div>
         </section>
     </main>
@@ -109,8 +121,8 @@
         const canvas = document.getElementById('starfield');
         const ctx = canvas.getContext('2d');
         let particles = [];
-        // Deep purple and dark indigo colors
-        const colors = ['#581c87', '#3b0764', '#2e1065', '#1e1b4b'];
+        // Deep purple, violet, and dark void
+        const colors = ['#581c87', '#3b0764', '#1e1b4b', '#0f172a']; 
         
         function resize(){ canvas.width=window.innerWidth; canvas.height=window.innerHeight; init(); }
         function init(){
