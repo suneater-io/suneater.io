@@ -76,11 +76,11 @@
       
       <!-- Central Sigil / Logo Area -->
       <div class="mb-12 relative animate-float">
-        <div class="w-[28rem] h-[28rem] mx-auto flex items-center justify-center relative z-10">
+        <div class="w-[32rem] h-[32rem] mx-auto flex items-center justify-center relative z-10">
             <img src="https://raw.githubusercontent.com/suneater-io/suneater.io/refs/heads/main/suneater_logo_header.png" alt="Suneater Logo" class="w-full h-full object-contain opacity-80 hover:opacity-100 transition-opacity duration-500 drop-shadow-[0_0_35px_rgba(185,28,28,0.15)]">
         </div>
         <!-- Glow behind sigil -->
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[32rem] h-[32rem] bg-red-950/10 blur-[100px] -z-0 rounded-full"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[38rem] h-[38rem] bg-red-950/10 blur-[100px] -z-0 rounded-full"></div>
       </div>
 
       <h2 class="font-display text-5xl md:text-7xl font-bold text-slate-100 mb-6 tracking-tight drop-shadow-2xl">
@@ -358,8 +358,8 @@
         const canvas = document.getElementById('starfield');
         const ctx = canvas.getContext('2d');
         let particles = [];
-        // Deep reds, dark slates, and occasional bright embers
-        const colors = ['#7f1d1d', '#450a0a', '#991b1b', '#1e293b', '#0f172a']; 
+        // Brighter reds/oranges for visibility against the dark background
+        const colors = ['#b91c1c', '#991b1b', '#7f1d1d', '#ef4444', '#1e293b']; 
         
         function resize(){ canvas.width=window.innerWidth; canvas.height=window.innerHeight; init(); }
         
@@ -370,12 +370,12 @@
             for(let i=0;i<n;i++) particles.push({
                 x: Math.random()*canvas.width, 
                 y: Math.random()*canvas.height, 
-                // Variable size for depth
-                s: Math.random()*2.5 + 0.5, 
+                // Increased size
+                s: Math.random()*3 + 1, 
                 // Slower movement
                 v: Math.random()*0.15 + 0.02, 
-                // Lower opacity for subtle look
-                o: Math.random()*0.6 + 0.1, 
+                // Increased opacity range for better visibility
+                o: Math.random()*0.5 + 0.4, 
                 c: colors[Math.floor(Math.random()*colors.length)]
             });
         }
